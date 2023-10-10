@@ -4,7 +4,7 @@ import pickle
 
 class HealthInsurance():
     def __init__(self):
-        self.home_path='/Users/luishmq/Documents/repos/insurance_cross_sell/'
+        self.home_path=''
         self.annual_premium_scaler       = pickle.load(open(self.path + 'src/features/annual_premium.pkl'))
         self.age_scaler                  = pickle.load(open(self.path + 'src/features/age.pkl'))
         self.days_scaler                 = pickle.load(open(self.path + 'src/features/days_client_associate.pkl'))
