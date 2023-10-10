@@ -11,7 +11,7 @@ model = pickle.load( open( '/Users/luishmq/Documents/repos/insurance_cross_sell/
 app = Flask( __name__ )
 
 @app.route( '/predict', methods=['POST'] )
-def rossmann_predict():
+def insurance_predict():
     test_json = request.get_json()
    
     if test_json: # there is data
@@ -21,7 +21,6 @@ def rossmann_predict():
         else: # multiple example
             test_raw = pd.DataFrame( test_json, columns=test_json[0].keys() )
             
-        # Instantiate Rossmann class
         pipeline = HealthInsurance()
         
         # feature engineering
@@ -36,7 +35,7 @@ def rossmann_predict():
         return df_response
 
     else:
-        return Reponse( '{}', status=200, mimetype='application/json' )
+        return Response( '{}', status=200, mimetype='application/json' )
 
 if __name__ == '__main__':
     app.run( '0.0.0.0' )
