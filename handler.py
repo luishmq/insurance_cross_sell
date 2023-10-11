@@ -5,7 +5,7 @@ import pandas as pd
 import xgboost as xgb
 
 # loading model
-model = pickle.load( open( '/Users/luishmq/Documents/repos/insurance_cross_sell/src/models/xgb_model.pkl', 'rb') )
+model = pickle.load( open( 'src/models/xgb_model.pkl', 'rb') )
 
 # initialize API
 app = Flask( __name__ )
