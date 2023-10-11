@@ -8,5 +8,3 @@ Boruta==0.3
 Flask==2.2.2
 inflection==0.5.1
 xgboost==0.90
-Werkzeug>=2.0
-
