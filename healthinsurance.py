@@ -10,7 +10,9 @@ class HealthInsurance():
         self.days_scaler                 = pickle.load(open(self.home_path + 'src/features/days_client_associate.pkl', 'rb'))
         self.gender_scaler               = pickle.load(open(self.home_path + 'src/features/gender.pkl', 'rb'))
         self.region_code_scaler          = pickle.load(open(self.home_path + 'src/features/region_code.pkl', 'rb'))
-        self.sales_channel_scaler        = pickle.load(open(self.home_path + 'src/features/sales_channel.pkl', 'rb'))             
+        self.sales_channel_scaler        = pickle.load(open(self.home_path + 'src/features/sales_channel.pkl', 'rb'))
+        self.vehicle_damage_scaler       = pickle.load(open(self.home_path + 'src/features/vehicle_damage.pkl', 'rb'))             
+             
 
     def feature_engineering(self, df2):
 
