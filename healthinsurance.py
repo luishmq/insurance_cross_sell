@@ -66,7 +66,7 @@ class HealthInsurance():
         
         return df5[cols_selected]
 
-    def get_predict(self, model, original_data, test_data):
+    def get_prediction(self, model, original_data, test_data):
         
         # model prediction
         pred = model.predict_proba(test_data)
