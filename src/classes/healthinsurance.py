@@ -5,12 +5,12 @@ import pickle
 class HealthInsurance():
     def __init__(self):
         self.home_path=''
-        self.annual_premium_scaler       = pickle.load(open(self.path + 'src/features/annual_premium.pkl'))
-        self.age_scaler                  = pickle.load(open(self.path + 'src/features/age.pkl'))
-        self.days_scaler                 = pickle.load(open(self.path + 'src/features/days_client_associate.pkl'))
-        self.gender_scaler               = pickle.load(open(self.path + 'src/features/gender.pkl'))
-        self.region_code_scaler          = pickle.load(open(self.path + 'src/features/region_code.pkl'))
-        self.sales_channel_scaler        = pickle.load(open(self.path + 'src/features/sales_channel.pkl'))             
+        self.annual_premium_scaler       = pickle.load(open(self.home_path + 'src/features/annual_premium.pkl'))
+        self.age_scaler                  = pickle.load(open(self.home_path + 'src/features/age.pkl'))
+        self.days_scaler                 = pickle.load(open(self.home_path + 'src/features/days_client_associate.pkl'))
+        self.gender_scaler               = pickle.load(open(self.home_path + 'src/features/gender.pkl'))
+        self.region_code_scaler          = pickle.load(open(self.home_path + 'src/features/region_code.pkl'))
+        self.sales_channel_scaler        = pickle.load(open(self.home_path + 'src/features/sales_channel.pkl'))             
 
     def feature_engineering(self, df2):
 
