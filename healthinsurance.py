@@ -53,15 +53,15 @@ class HealthInsurance():
         df5.loc[:,'sales_channel'] = df5['sales_channel'].map(self.sales_channel_scaler)
 
         cols_selected = [
-                'days_client_associate',
-                'annual_premium',
                 'gender',
+                'annual_premium',
                 'age',
                 'region_code',
                 'vehicle_damage',
                 'sales_channel',
+                'vehicle_insured',
                 'vehicle_age_bellow_1_year',
-                'vehicle_insured']
+                'days_client_associate']
 
         
         return df5[cols_selected]
