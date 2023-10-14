@@ -60,7 +60,6 @@ class HealthInsurance():
                 'vehicle_damage',
                 'sales_channel',
                 'vehicle_insured',
-                'vehicle_age_bellow_1_year',
                 'days_client_associate']
 
         
