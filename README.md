@@ -116,9 +116,9 @@ The image shows this:
 
 ![](imgs/gain_curve.png)
 
-Based on these metrics, the model chosen for this project was **XGBoost Classifier**
+Based on these metrics, the model chosen for this project was **XGBoost Classifier**.
 
-The adjustment of the hyperparameters of the chosen model was carried out using the Baysian Optimazation method.
+The adjustment of the hyperparameters of the chosen model was carried out using the Bayesian Optimazation method.
 
 In short, given an objective function (which in this work was the maximization of the model's accuracy) this method seeks the **global optimum** by approximating the real function of hyperparameters through a “false” function called a substitute function.
 
@@ -130,16 +130,21 @@ For this application, the optuna library was used. The results of the method ite
 
 # 6.0 Business Results
 
-To measure the financial impacts of this project, an analysis was made from the perspective of the profit obtained from the operation comparing two approaches, the first without using the model and ordering customers and the second with the ordering given by the model.
+From the predictions made by the model, we can draw some conclusions.
 
-This analysis was based on some premises:
+Assuming that for each customer the company can sell vehicle insurance to, it has a Gross Profit of $540. Let's also consider that the company intends to call these potential customers, and each call has a total cost of $40.
 
-- The profit obtained by the operation is equal to the revenue obtained from each converted customer subtracted from the customer acquisition cost
-- Here we assume fictitious and fixed values ​​for revenue and customer acquisition costs as being 40 monetary units (u.m.) and 4 u.m. respectively.
-
-The result of this analysis can be seen in the graph below:
+Looking at the graph below, the initial customers are those with the highest probability of accepting vehicle insurance. However, there comes a point where the company starts calling customers who do not have a very high chance of purchasing insurance, and the cost starts to stand out, reducing the profit.
 
 ![](imgs/bus_graph.png)
+
+In other words, the company needs to call 46% of the customer base (those with the highest probability of accepting insurance) to maximize profit.
+
+- Total Profit calling 100% Customers: R$2,683,235.00
+  
+- Total Profit calling 46% Customers: R$3,878,010.00
+
+This is a profit 1.44 times higher using the model.
 
 Infos:
 
@@ -163,12 +168,19 @@ The following image show this spreadsheet:
 
 # 8.0 Conclusions
 
+As we can see, the final product was a Google Sheets spreadsheet that predicts and ranks customers who are most likely to acquire vehicle insurance, allowing the insurance company to contact only potential customers. This spreadsheet can be accessed from any device with internet access that has the Google Sheets application.
+
 # 9.0 Lessons Learned
+
+- Learn to rank techniques
+- Develop solutions in a cyclical way, thus delivering results in a more agile and efficient way
+- Google Sheets for score analysis easily via API
+- Optuna 
 
 # 10.0 Next Steps
 
 As next steps and improvements for the evolution of this project, the following points were listed:
 
-- Collection of new features that may be relevant for predicting customer conversion.
-- Creation of new features based on existing features, which help in modeling the phenomenon.
-- Facilitate access for the sales team to model predictions, improving the usability of the shared spreadsheet through buttons, instructions and feature selections
+- Testing other Machine Learning models / Fine-tuning parameters to further refine the model
+- Creation of new features based on existing features, which help in modeling the phenomenon
+- Optimizing the model to make predictions and rank customers in Excel
